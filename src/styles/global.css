@@ -112,3 +112,81 @@ footer{width:var(--content);height:104px;margin:0 auto;border-top:1px solid var(
 @media (max-width: 1050px){:root{--content:calc(100vw - 40px)}.topbar nav{display:none}.text-button{margin-left:auto}.section-screen{height:auto;min-height:900px;padding-bottom:70px}.hero{min-height:980px;padding-top:82px}.hero-copy{width:78%;max-width:650px;padding-top:48px}.hero h1{white-space:normal}.hero-map{position:absolute;width:100%;right:-12%;top:370px;height:520px;opacity:.8}.india-locator{right:4%;top:8%;transform:scale(.88);transform-origin:top right}.leh-terrain-label{left:54%;top:43%}.terrain-classification{bottom:12%;right:6%}.terrain-disclaimer{bottom:7%;right:6%}.configuration-grid{grid-template-columns:1fr}.parameter-panel{min-height:auto}.analysis-layout{grid-template-columns:1fr;grid-template-rows:auto}.chart-card,.metric-stack,.heat-flow-card{grid-column:1;grid-row:auto}.metric-stack{grid-template-columns:repeat(4,1fr);grid-template-rows:1fr}.metric{border-bottom:0;border-right:1px solid var(--line)}.flow-grid{grid-template-columns:1fr}.flow-gains{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.comparison-main{grid-template-columns:1fr}.recommendation-band{height:auto;grid-template-columns:1fr;padding:24px}.recommendation-band p{border-left:0;padding-left:0}.analysis-note{position:static;margin-top:16px}.scenario-tabs.compact{width:470px}.section-heading p{max-width:420px}}
 @media (max-width: 700px){:root{--content:calc(100vw - 28px)}.topbar{height:64px;padding:0 14px}.brand{min-width:0}.brand small{display:none}.text-button{font-size:7px;padding:8px}.section-screen{padding-top:88px;min-height:760px}.hero{padding-top:74px;min-height:980px}.hero-copy{width:100%;padding-top:22px}.hero h1{font-size:48px;white-space:normal;line-height:.94}.hero-copy>p{font-size:14px;max-width:92%}.hero-map{width:128%;right:-36%;top:350px;height:470px;opacity:.78}.india-locator{right:5%;top:6%;transform:scale(.72);transform-origin:top right}.leh-terrain-label{left:43%;top:46%;transform:scale(.85);transform-origin:left top}.terrain-classification{display:none}.terrain-disclaimer{right:4%;bottom:5%;font-size:5px}.terrain-north{display:none}.weather-strip{grid-template-columns:1fr 1fr;height:auto}.weather-strip>div{padding:15px;border-bottom:1px solid var(--line)}.section-heading{display:block}.section-heading p{margin-top:15px}.section-heading h2{font-size:34px}.scenario-tabs{height:auto}.scenario-tabs button{padding:13px 8px!important;gap:6px}.scenario-tabs button strong{font-size:7px}.configuration-grid{height:auto}.shelter-visual{min-height:420px}.parameter-list>div{padding:10px 0}.analysis-top{display:block}.scenario-tabs.compact{width:100%;margin-top:16px}.analysis-layout{padding-top:12px}.chart-card{padding:14px 10px}.chart-legend{gap:8px;font-size:6px}.metric-stack{grid-template-columns:1fr 1fr}.metric{border-bottom:1px solid var(--line)}.flow-losses{grid-template-columns:1fr}.flow-row>span{grid-column:auto}.flow-row{grid-template-columns:80px 1fr 34px 24px}.energy-row{grid-template-columns:100px 1fr 70px;gap:10px}.energy-label strong{font-size:7px}.energy-value strong{font-size:17px}.impact-callouts strong{font-size:22px}.orientation-body{grid-template-columns:150px 1fr}.sun-compass{width:150px}.orientation-card{padding:14px}.recommendation-band ul{grid-template-columns:1fr}.analysis-note{line-height:1.5}footer{grid-template-columns:1fr;height:auto;padding:25px 0;gap:12px}footer p,footer a{text-align:left}}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.terrain-canvas-shell,.india-locator,.leh-terrain-label{opacity:1!important;transform:none!important}}
+
+/* =========================================================
+   LAYOUT HOTFIX — CONFIGURATION + THERMAL ANALYSIS
+   ========================================================= */
+
+.configuration-section {
+  height: auto;
+  min-height: 900px;
+  padding-bottom: 72px;
+}
+
+.configuration-grid {
+  height: auto;
+  min-height: 590px;
+  align-items: stretch;
+}
+
+.parameter-panel {
+  height: auto;
+}
+
+.scenario-rationale {
+  flex-shrink: 0;
+}
+
+.chart-card {
+  overflow: hidden;
+}
+
+.mini-heading {
+  position: relative;
+  z-index: 3;
+}
+
+.temperature-chart {
+  margin-top: 30px;
+  height: 308px;
+}
+
+.chart-legend {
+  top: -22px;
+  left: 3px;
+  right: auto;
+  z-index: 5;
+}
+
+@media (max-height: 820px) and (min-width: 1100px) {
+  .configuration-section {
+    height: auto;
+    min-height: 900px;
+  }
+
+  .configuration-grid {
+    height: auto;
+  }
+
+  .temperature-chart {
+    height: 262px;
+    margin-top: 28px;
+  }
+
+  .chart-legend {
+    top: -21px;
+  }
+}
+
+@media (max-width: 700px) {
+  .temperature-chart {
+    margin-top: 34px;
+  }
+
+  .chart-legend {
+    top: -27px;
+    left: 0;
+    right: auto;
+    flex-wrap: wrap;
+  }
+}
